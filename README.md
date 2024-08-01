@@ -1,7 +1,6 @@
 # Brinvex-Repo
 
-Public GitHub hosted repository containing various Brinvex Maven artifacts.
-
+    <!-- A public GitHub repository acting as the Maven repository for a range of Brinvex Java artifacts. -->
     <repository>
         <id>repository.brinvex</id>
         <name>Brinvex Repository</name>
