@@ -3,10 +3,10 @@
   <groupId>com.brinvex.util</groupId>
   <artifactId>brinvex-util-ecb</artifactId>
   <versioning>
-    <release>1.0.1</release>
+    <release>1.0.2</release>
     <versions>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </versions>
-    <lastUpdated>20240804100223</lastUpdated>
+    <lastUpdated>20240804105920</lastUpdated>
   </versioning>
 </metadata>
