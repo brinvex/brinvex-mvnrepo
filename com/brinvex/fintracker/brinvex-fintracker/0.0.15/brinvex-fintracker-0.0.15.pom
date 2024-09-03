@@ -124,16 +124,6 @@
         </dependencies>
     </dependencyManagement>
 
-<!--
-    <distributionManagement>
-        <repository>
-            <id>temp-internal-staging-repo</id>
-            <name>Temporary Internal Staging Repository</name>
-            <url>file://${project.build.directory}/repo</url>
-        </repository>
-    </distributionManagement>
--->
-
     <build>
         <pluginManagement>
             <plugins>
@@ -157,6 +147,15 @@
                     <missing>disable_artifact_deploy</missing>
                 </file>
             </activation>
+
+            <distributionManagement>
+                <repository>
+                    <id>temp-internal-staging-repo</id>
+                    <name>Temporary Internal Staging Repository</name>
+                    <url>file://${user.dir}/target/repo</url>
+                </repository>
+            </distributionManagement>
+
             <build>
 
                     <plugins>
@@ -184,7 +183,7 @@
                             <version>${maven-deploy-plugin.version}</version>
                             <configuration>
                                 <skip>false</skip>
-                                <altDeploymentRepository>temp-internal-staging-repo::default::file://${user.dir}/target/repo</altDeploymentRepository>
+                                <!--<altDeploymentRepository>temp-internal-staging-repo::default::file://${user.dir}/target/repo</altDeploymentRepository>-->
                             </configuration>
                         </plugin>
                         <plugin>
