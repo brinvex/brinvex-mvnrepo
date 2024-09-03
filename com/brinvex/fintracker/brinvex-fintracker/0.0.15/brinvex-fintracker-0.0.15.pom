@@ -141,10 +141,11 @@
 
     <profiles>
         <profile>
-            <id>artifact-deploy</id>
+            <id>publish-artifact</id>
             <activation>
+                <activeByDefault>true</activeByDefault>
                 <file>
-                    <missing>disable_artifact_deploy</missing>
+                    <missing>publish-artifact-disabled</missing>
                 </file>
             </activation>
 
@@ -158,67 +159,67 @@
 
             <build>
 
-                    <plugins>
+                <plugins>
 
-                        <!--
-                        https://www.baeldung.com/maven-repo-github
-                        https://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github
-                        -->
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-source-plugin</artifactId>
-                            <version>${maven-source-plugin.version}</version>
-                            <executions>
-                                <execution>
-                                    <id>attach-sources</id>
-                                    <goals>
-                                        <goal>jar</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-deploy-plugin</artifactId>
-                            <version>${maven-deploy-plugin.version}</version>
-                            <configuration>
-                                <skip>false</skip>
-                                <!--<altDeploymentRepository>temp-internal-staging-repo::default::file://${user.dir}/target/repo</altDeploymentRepository>-->
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>com.github.github</groupId>
-                            <artifactId>site-maven-plugin</artifactId>
-                            <version>${github-site-maven-plugin.version}</version>
-                            <configuration>
-                                <!-- git commit message -->
-                                <message>Maven artifacts for ${project.name} ${project.version}</message>
-                                <!-- disable webpage processing -->
-                                <noJekyll>true</noJekyll>
-                                <!-- matches distribution management repository url above -->
-                                <outputDirectory>${user.dir}/target/repo</outputDirectory>
-                                <!-- remote branch name -->
-                                <branch>refs/heads/main</branch>
-                                <includes>
-                                    <include>**/*</include>
-                                </includes>
-                                <!-- GitHub repo name -->
-                                <repositoryName>brinvex-repo</repositoryName>
-                                <!-- GitHub username  -->
-                                <repositoryOwner>brinvex</repositoryOwner>
-                                <merge>true</merge>
-                            </configuration>
-                            <executions>
-                                <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
-                                <execution>
-                                    <goals>
-                                        <goal>site</goal>
-                                    </goals>
-                                    <phase>deploy</phase>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
+                    <!--
+                    https://www.baeldung.com/maven-repo-github
+                    https://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github
+                    -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-deploy-plugin</artifactId>
+                        <version>${maven-deploy-plugin.version}</version>
+                        <configuration>
+                            <skip>false</skip>
+                            <!--<altDeploymentRepository>temp-internal-staging-repo::default::file://${user.dir}/target/repo</altDeploymentRepository>-->
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>${github-site-maven-plugin.version}</version>
+                        <configuration>
+                            <!-- git commit message -->
+                            <message>Maven artifacts for ${project.name} ${project.version}</message>
+                            <!-- disable webpage processing -->
+                            <noJekyll>true</noJekyll>
+                            <!-- matches distribution management repository url above -->
+                            <outputDirectory>${user.dir}/target/repo</outputDirectory>
+                            <!-- remote branch name -->
+                            <branch>refs/heads/main</branch>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                            <!-- GitHub repo name -->
+                            <repositoryName>brinvex-repo</repositoryName>
+                            <!-- GitHub username  -->
+                            <repositoryOwner>brinvex</repositoryOwner>
+                            <merge>true</merge>
+                        </configuration>
+                        <executions>
+                            <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>deploy</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
 
             </build>
         </profile>
