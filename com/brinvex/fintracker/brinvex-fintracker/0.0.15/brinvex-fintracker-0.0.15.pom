@@ -143,7 +143,6 @@
         <profile>
             <id>publish-artifact</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
                 <file>
                     <missing>publish-artifact-disabled</missing>
                 </file>
@@ -160,7 +159,6 @@
             <build>
 
                 <plugins>
-
                     <!--
                     https://www.baeldung.com/maven-repo-github
                     https://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github
