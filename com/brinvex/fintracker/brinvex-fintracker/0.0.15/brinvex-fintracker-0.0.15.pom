@@ -124,6 +124,7 @@
         </dependencies>
     </dependencyManagement>
 
+<!--
     <distributionManagement>
         <repository>
             <id>temp-internal-staging-repo</id>
@@ -131,13 +132,14 @@
             <url>file://${project.build.directory}/repo</url>
         </repository>
     </distributionManagement>
+-->
 
     <profiles>
         <profile>
             <id>artifact-deploy</id>
             <activation>
                 <file>
-                    <missing>disable-artifact-deploy</missing>
+                    <missing>disable_artifact_deploy</missing>
                 </file>
             </activation>
             <build>
