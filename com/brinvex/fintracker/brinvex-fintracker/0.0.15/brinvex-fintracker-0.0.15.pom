@@ -134,6 +134,21 @@
     </distributionManagement>
 -->
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <profiles>
         <profile>
             <id>artifact-deploy</id>
@@ -168,6 +183,7 @@
                             <artifactId>maven-deploy-plugin</artifactId>
                             <version>${maven-deploy-plugin.version}</version>
                             <configuration>
+                                <skip>false</skip>
                                 <altDeploymentRepository>temp-internal-staging-repo::default::file://${user.dir}/target/repo</altDeploymentRepository>
                             </configuration>
                         </plugin>
@@ -209,9 +225,7 @@
         </profile>
 
     </profiles>
-    <build>
 
-    </build>
 
     <repositories>
         <repository>
