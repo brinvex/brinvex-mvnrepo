@@ -3,10 +3,10 @@
   <groupId>com.brinvex.fintracker</groupId>
   <artifactId>brinvex-fintracker-connector-rvlt-impl</artifactId>
   <versioning>
-    <release>0.0.44</release>
+    <release>0.0.45</release>
     <versions>
-      <version>0.0.44</version>
+      <version>0.0.45</version>
     </versions>
-    <lastUpdated>20241122221411</lastUpdated>
+    <lastUpdated>20241125184322</lastUpdated>
   </versioning>
 </metadata>
