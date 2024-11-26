@@ -3,10 +3,10 @@
   <groupId>com.brinvex.fintracker</groupId>
   <artifactId>brinvex-fintracker-connector-fiob-api</artifactId>
   <versioning>
-    <release>0.0.46</release>
+    <release>0.0.47</release>
     <versions>
-      <version>0.0.46</version>
+      <version>0.0.47</version>
     </versions>
-    <lastUpdated>20241125204516</lastUpdated>
+    <lastUpdated>20241126202415</lastUpdated>
   </versioning>
 </metadata>
