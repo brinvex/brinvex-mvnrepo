@@ -18,57 +18,41 @@
         </dependency>
         <dependency>
             <groupId>com.brinvex.util</groupId>
+            <artifactId>brinvex-util-dms-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.brinvex.util</groupId>
+            <artifactId>brinvex-util-dms-impl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.brinvex.util</groupId>
             <artifactId>brinvex-util-java</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>com.brinvex.util</groupId>
-            <artifactId>brinvex-util-persistence-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.brinvex.util</groupId>
-            <artifactId>brinvex-util-persistence-impl</artifactId>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
             <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.brinvex.util</groupId>
-            <artifactId>brinvex-util-dms-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.orm</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <optional>true</optional>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-el</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
-            <optional>true</optional>
         </dependency>
 
         <dependency>
