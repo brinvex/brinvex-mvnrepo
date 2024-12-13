@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.brinvex.fintracker</groupId>
+        <artifactId>brinvex-fintracker</artifactId>
+        <version>0.0.62</version>
+    </parent>
+
+    <artifactId>brinvex-fintracker-connector</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>brinvex-fintracker-connector-ibkr</module>
+        <module>brinvex-fintracker-connector-rvlt</module>
+        <module>brinvex-fintracker-connector-fiob</module>
+        <module>brinvex-fintracker-connector-amnd</module>
+    </modules>
+
+</project>
