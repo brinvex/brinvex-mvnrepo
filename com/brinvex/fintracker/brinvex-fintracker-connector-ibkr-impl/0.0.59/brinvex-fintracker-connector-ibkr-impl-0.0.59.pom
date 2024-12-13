@@ -17,10 +17,6 @@
             <artifactId>brinvex-fintracker-connector-ibkr-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.brinvex.util</groupId>
-            <artifactId>brinvex-util-dms-api</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.brinvex.fintracker</groupId>
             <artifactId>brinvex-fintracker-core-impl</artifactId>
             <scope>runtime</scope>
