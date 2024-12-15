@@ -112,6 +112,14 @@
         </pluginManagement>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>temp-internal-staging-repo</id>
+            <name>Temporary Internal Staging Repository</name>
+            <url>file://${project.build.directory}/repo</url>
+        </repository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>artifact-publishing</id>
@@ -120,14 +128,6 @@
                     <missing>artifact-publishing-disabled</missing>
                 </file>
             </activation>
-
-            <distributionManagement>
-                <repository>
-                    <id>temp-internal-staging-repo</id>
-                    <name>Temporary Internal Staging Repository</name>
-                    <url>file://${project.build.directory}/repo</url>
-                </repository>
-            </distributionManagement>
 
             <build>
                 <plugins>
