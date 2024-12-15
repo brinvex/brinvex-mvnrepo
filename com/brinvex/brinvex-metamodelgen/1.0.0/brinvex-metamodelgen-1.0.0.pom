@@ -166,7 +166,7 @@
                             <!-- disable webpage processing -->
                             <noJekyll>true</noJekyll>
                             <!-- matches distribution management repository url above -->
-                            <outputDirectory>${user.dir}/target/repo</outputDirectory>
+                            <outputDirectory>${project.build.directory}/repo</outputDirectory>
                             <!-- remote branch name -->
                             <branch>refs/heads/main</branch>
                             <includes>
