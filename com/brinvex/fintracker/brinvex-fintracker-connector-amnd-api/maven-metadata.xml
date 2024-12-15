@@ -3,10 +3,10 @@
   <groupId>com.brinvex.fintracker</groupId>
   <artifactId>brinvex-fintracker-connector-amnd-api</artifactId>
   <versioning>
-    <release>0.0.66</release>
+    <release>0.0.67</release>
     <versions>
-      <version>0.0.66</version>
+      <version>0.0.67</version>
     </versions>
-    <lastUpdated>20241214205741</lastUpdated>
+    <lastUpdated>20241215171535</lastUpdated>
   </versioning>
 </metadata>
