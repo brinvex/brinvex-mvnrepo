@@ -125,7 +125,7 @@
                 <repository>
                     <id>temp-internal-staging-repo</id>
                     <name>Temporary Internal Staging Repository</name>
-                    <url>file://${user.dir}/target/repo</url>
+                    <url>file://${project.build.directory}/repo</url>
                 </repository>
             </distributionManagement>
 
